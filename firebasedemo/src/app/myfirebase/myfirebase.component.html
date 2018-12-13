@@ -1,0 +1,85 @@
+<html>
+  <head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    </head>
+  <body>
+    <div class="container header">
+      <div class="row">
+            
+                <h1 class=" bg-primary  text-center text-white" style="margin-top:10px;text-shadow:-1px -1px #000,-1px 1px #000,1px -1px #000,1px 1px #000;border-radius:10px;height:50px;width:630px;margin-left: auto;margin-right: auto">
+                  <span style="line-height: 50px">Angular Integration With Firebase</span></h1>
+            
+            
+       
+        <table class="table table-striped"  border="1" cellpadding="5">
+          <thead>
+              <tr class="bg-dark text-white text-center">
+                  <td>Course Name</td>
+                  <td>Course Duration</td>
+                  <td colspan="2">Report</td>
+              </tr>
+          </thead>
+            <tbody>
+                <tr *ngFor="let item of items | async">
+                    <td>{{ item.coursename }}</td>
+                    <td>{{item.duration}}</td>
+                    <td><button class="btn btn-success"  (click)="myEditNew(item,btnadd)">Edit</button></td>
+                    <td>
+                      <!-- <button (click)="myDeleteNew(item)">Delete</button> -->
+                      <button class="btn btn-danger"  (click)="myDeleteNew(item)">Delete</button>
+                    </td>
+                  </tr>
+            </tbody>
+          </table>        
+          
+      </div>
+      </div>
+      
+      
+        <div class="container">
+          <div class="row">
+              <div class="text-container w-100">
+                   
+                     <div class="form-group" >
+                         <input   [(ngModel)]="cName" type="text"  class="form-control col-md-10 col-sm-5" id="item-name"
+                          placeholder="Enter Course Name" >
+                     </div>
+                     <div class="form-group " >
+                         <input  [(ngModel)]="cDuration" type="text"  class="form-control col-md-10 col-sm-5" id="item-name"
+                          placeholder="Enter Course Duration" >
+                     </div>
+                   
+                 <button #btnadd (click)="myCourseName(btnadd)" class="col-sm-4 btnAdd  btn btn-warning">Add</button>
+               <!-- <input #userInput [(ngModel)]="cName" placeholder="Course Name">
+               <input #userInput1  [(ngModel)]="cDuration" placeholder="Course Duration"> -->
+     
+              
+           
+         </div>
+       </div>
+          </div>
+            
+   
+
+      <!-- <ul>
+    <li *ngFor="let item of items | async">
+      {{ item.coursename }} {{item.duration}}
+  
+    </li>
+  </ul>   -->
+  
+  
+  
+  <!-- <p>Perform any of the DB opration (Hardcoded way)</p> -->
+  <!-- <button (click)="fbAddCourses()">Add Courses</button>
+  <button (click)="fbUpdateCourse()">Update Courses</button>
+  <button (click)="fbDeleteCourses()">Delete Courses</button> -->
+  
+  <!-- <button (click)="myCourseName()">Text Add Course</button> -->
+  <!-- <button (click)="firebaseAddCourse()">Firebase Add Courses</button>     -->
+  
+  </body>
+</html>

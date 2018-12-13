@@ -1,0 +1,53 @@
+input
+{
+    font-size:25px;
+    
+   
+}
+@media (max-width:568px)
+{
+    input 
+    {
+        height:40px;
+        width:300px;
+       
+    }
+    .form-group
+    {
+        padding-top: 15px;
+        margin-left:20px;
+       
+        width:100%; 
+    }
+    h1
+    {
+        font-size:20px; 
+    }
+    
+}
+body
+{
+    
+    margin:0;
+    padding:0;  
+}
+thead tr td
+{
+    font-size:20px;
+    font-family: 'Courier New', Courier, monospace; 
+    font-weight:900; 
+}
+tbody
+{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.header
+{
+    background-image: linear-gradient(orange,white,green);
+}
+.text-container
+{
+    background: red;
+    height:200px; 
+}
